@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking Site</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            height: 40px;
+        }
+        .trending {
+            margin-top: 40px;
+        }
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+        .sign-in-btn {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="Site Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" id="cityBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select City
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="cityBtn">
+                        <a class="dropdown-item" href="#" onclick="selectCity('Mumbai')">Mumbai</a>
+                        <a class="dropdown-item" href="#" onclick="selectCity('Delhi')">Delhi</a>
+                        <a class="dropdown-item" href="#" onclick="selectCity('Bangalore')">Bangalore</a>
+                        <a class="dropdown-item" href="#" onclick="selectCity('Chennai')">Chennai</a>
+                        <a class="dropdown-item" href="#" onclick="selectCity('Kolkata')">Kolkata</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-2" type="search" placeholder="Search for movies, events, plays, sports" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button class="btn btn-primary sign-in-btn">Sign In</button>
+        </div>
+    </nav>
+
+    <section class="container trending">
+        <h2 class="text-center mb-4">Trending Movies</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="stree.html">
+                        <img src="stree_poster.jpg" alt="Stree Movie" class="card-img-top clickable">
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stree</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="joker.html">
+                        <img src="joker.jpg" alt="Joker Movie" class="card-img-top clickable">
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Joker</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="stree.html">
+                        <img src="stree_poster.jpg" alt="Stree Movie" class="card-img-top clickable">
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stree</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="stree.html">
+                        <img src="stree_poster.jpg" alt="Stree Movie" class="card-img-top clickable">
+                    </a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stree</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function selectCity(city) {
+            document.getElementById('cityBtn').textContent = city;
+        }
+    </script>
+</body>
+</html>
